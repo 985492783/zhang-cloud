@@ -1,0 +1,12 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: zhang-cloud-alipay
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 101.34.40.117:8848
+        file-extension: yaml

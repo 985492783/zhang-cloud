@@ -35,7 +35,7 @@
             </tr>
             <tr>
               <th>头像</th>
-              <th><el-image :src="User.url" style="height:150px;width:150px" onerror="onerror=null;src='https://img.51miz.com/Element/00/88/82/42/c21e019b_E888242_0f2360ce.png'"></el-image></th>
+              <th><el-image :src="User.url===null?User.url:'https://img.51miz.com/Element/00/88/82/42/c21e019b_E888242_0f2360ce.png'" style="height:150px;width:150px" onerror="onerror=null;src='https://img.51miz.com/Element/00/88/82/42/c21e019b_E888242_0f2360ce.png'"></el-image></th>
             </tr>
           </table>
         </el-container>
@@ -89,8 +89,10 @@ export default {
         } else {
           this.$refs.myDialog.alert('查询失败', null)
         }
-      }, () => {
-        this.$refs.myDialog.alert('接口未开启', null)
+      }, (error) => {
+        if (error.status !== 401) {
+          this.$refs.myDialog.alert('接口未开启', null)
+        }
       })
     },
     changeData (type, data) {

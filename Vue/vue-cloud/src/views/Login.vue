@@ -52,7 +52,7 @@ export default {
         }
         this.$session.set('token', res.data.data.token)
         this.$session.set('username', res.data.data.username)
-        this.$router.push({ path: '/home' })
+        this.$router.push({ path: '/Dashboard' })
       }, () => {
         this.$refs.myDialog.alert('服务器超时，请稍后重试', null)
       })

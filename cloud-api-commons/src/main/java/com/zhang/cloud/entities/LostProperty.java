@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 /**
  * @author 98549
  * @date 2021/11/12 0:50
@@ -40,4 +42,8 @@ public class LostProperty {
      * image
      */
     private String image;
+    /**
+     * time
+     */
+    private LocalDateTime gmtCreated;
 }

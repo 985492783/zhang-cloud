@@ -28,4 +28,11 @@ public interface UserService {
      * @return CommonResult
      */
     CommonResult logout(String token);
+
+    /**
+     * 验证
+     * @param token
+     * @return CommonResult
+     */
+    CommonResult verify(String token);
 }

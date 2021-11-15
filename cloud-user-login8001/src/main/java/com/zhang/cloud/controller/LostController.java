@@ -30,4 +30,16 @@ public class LostController {
     public CommonResult getLostById(@Param("id") Integer id){
         return lostService.getLostById(id);
     }
+    @GetMapping("api/user/searchLost")
+    public CommonResult searchLost(@Param("info") String info){
+        return lostService.searchLost(info);
+    }
+    @GetMapping("api/user/getPageNumber")
+    public CommonResult getPageNumber(){
+        return lostService.getPageNumber();
+    }
+    @GetMapping("api/user/getLostProperty")
+    public CommonResult getLostPropertyByPage(@Param("pageNo") Integer pageNo){
+        return lostService.getLostByPage(pageNo);
+    }
 }

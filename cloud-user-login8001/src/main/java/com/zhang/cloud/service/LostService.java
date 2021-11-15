@@ -14,4 +14,10 @@ public interface LostService {
     CommonResult getAllLost();
 
     CommonResult getLostById(Integer id);
+
+    CommonResult searchLost(String info);
+
+    CommonResult getPageNumber();
+
+    CommonResult getLostByPage(Integer page);
 }

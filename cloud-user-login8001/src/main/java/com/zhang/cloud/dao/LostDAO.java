@@ -16,4 +16,10 @@ public interface LostDAO {
     List<LostProperty> findAll();
 
     LostProperty findLostById(Integer id);
+
+    List<LostProperty> findLostByInfo(String info);
+
+    Integer getCount();
+
+    List<LostProperty> getLostByPage(Integer num);
 }

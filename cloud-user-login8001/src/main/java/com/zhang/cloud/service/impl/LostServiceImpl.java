@@ -52,4 +52,45 @@ public class LostServiceImpl implements LostService {
         }
         return new CommonResult(200,"查找成功",lostProperty);
     }
+
+    @Override
+    public CommonResult searchLost(String info) {
+        List<LostProperty> list = null;
+        try {
+            list = lostDAO.findLostByInfo(info);
+        }catch(Exception e){
+            e.printStackTrace();
+            return new CommonResult(444,"服务器超时，请稍后重试",null);
+        }
+        return new CommonResult(200,"查询成功",list);
+    }
+
+    @Override
+    public CommonResult getPageNumber() {
+        Integer res=0;
+        try {
+            res=lostDAO.getCount();
+            res=(res+9)/10;
+        }catch(Exception e){
+            e.printStackTrace();
+            return new CommonResult(444,"服务器错误，请稍后重试",0);
+        }
+        return new CommonResult(200,"查询成功",res);
+    }
+
+    @Override
+    public CommonResult getLostByPage(Integer page) {
+        List<LostProperty> list= null;
+        if(page<=0){
+            return new CommonResult(444,"非法查询",null);
+        }
+        Integer num=(page-1)*10;
+        try{
+            list = lostDAO.getLostByPage(num);
+        }catch(Exception e){
+            e.printStackTrace();
+            return new CommonResult(444,"服务器错误，请稍后重试",null);
+        }
+        return new CommonResult(200,"请求成功",list);
+    }
 }

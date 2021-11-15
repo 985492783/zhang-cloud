@@ -28,8 +28,14 @@ public class LoginController {
     public CommonResult login(@RequestBody UserDO userDO){
         return userService.login(userDO);
     }
+
+    @GetMapping("api/user/verify")
+    public CommonResult verity(HttpServletRequest request){
+        return userService.verify(request.getHeader("token"));
+    }
+
     @GetMapping("api/user/logout")
-    public CommonResult logout(HttpServletRequest request){
+    public  CommonResult logout(HttpServletRequest request){
         return userService.logout(request.getHeader("token"));
     }
 }

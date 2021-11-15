@@ -9,6 +9,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -64,6 +65,20 @@ public class UserServiceImpl implements UserService {
     public CommonResult logout(String token) {
         stringRedisTemplate.delete((String) JWTUtil.parseToken(token).getPayload("uid"));
         return new CommonResult(200,"登出",null);
+    }
+
+    @Override
+    public CommonResult verify(String token) {
+        String uid = (String) JWTUtil.parseToken(token).getPayload("uid");
+        if(StringUtils.isEmpty(uid)){
+            return new CommonResult(444,"不存在该用户,请重新登录",null);
+        }
+        String tok=stringRedisTemplate.opsForValue().get(uid);
+        if(token.equals(tok)){
+            return new CommonResult(200,"在线",null);
+        }else{
+            return new CommonResult(444,"该用户不在线,请重新登录",null);
+        }
     }
 
     public String getToken(String userName){

@@ -24,6 +24,8 @@ export default {
         this.$router.push({path: '/Add'})
       } else if (this.active === 1) {
         this.$router.push({path: '/Search'})
+      } else {
+        this.$router.push({path: '/Center'})
       }
     }
   }

@@ -9,7 +9,16 @@
     </template>
     <template v-if="isShow">
       <van-list style="margin:4px;" class="main">
-        <van-cell arrow-direction="" v-for="item in list" is-link :key="item.ddd" :title="item.name" :value="item.info" @click="showItem(item.id)"/>
+        <van-cell arrow-direction="" v-for="item in list" is-link :key="item.ddd" :title="item.name" :value="item.info" :label="item.gmtCreated" @click="showItem(item.id)"/>
+        <van-pagination
+          v-model="currentPage"
+          :page-count=pageSize
+          :total-items=list.length
+          :show-page-size="3"
+          force-ellipses
+          :items-per-page="10"
+          @change="changePage"
+        />
       </van-list>
     </template>
     <div class="main" v-if="!isShow">
@@ -27,21 +36,27 @@
             图片信息
           </van-divider>
           <div>
-            <img v-lazy="UserInfo.image" :key="UserInfo.image" style="width: 100%;"/>
+            <img v-lazy="UserInfo.image" :key="UserInfo.image" style="width: 100%;" @click="showImage(UserInfo.image)" />
           </div>
         </div>
       </van-skeleton>
     </div>
     <Bottom :act="0"></Bottom>
+    <Verify ref="verify"></Verify>
   </div>
 </template>
 
 <script>
 import Bottom from './Bottom'
+import Verify from './Verify'
 import axios from 'axios'
+import { ImagePreview } from 'vant'
 const requests = axios.create({baseURL: '/api'})
 export default {
-  components: {Bottom},
+  components: {
+    Bottom: Bottom,
+    Verify: Verify
+  },
   data () {
     return {
       list: [],
@@ -51,10 +66,14 @@ export default {
       isShow: true,
       UserInfo: {},
       loading: false,
-      activeName: '0'
+      activeName: '0',
+      currentPage: 1,
+      pageSize: 10
     }
   },
   mounted () {
+    this.$refs.verify.verify()
+    this.getPage()
     this.getData()
   },
   methods: {
@@ -83,7 +102,24 @@ export default {
     },
     getData () {
       let token = this.$session.get('token')
-      requests.get('/user/getAllLostProperty', {headers: {'token': token}}).then((res) => {
+      requests.get('/user/getLostProperty?pageNo=1', {headers: {'token': token}}).then((res) => {
+        this.list = res.data.data
+      })
+    },
+    showImage (e) {
+      ImagePreview([e])
+    },
+    getPage () {
+      let token = this.$session.get('token')
+      requests.get('/user/getPageNumber', {headers: {'token': token}}).then((res) => {
+        this.pageSize = res.data.data
+      }, () => {
+        this.pageSize = 100
+      })
+    },
+    changePage () {
+      let token = this.$session.get('token')
+      requests.get('/user/getLostProperty?pageNo=' + this.currentPage, {headers: {'token': token}}).then((res) => {
         this.list = res.data.data
       })
     }

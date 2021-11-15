@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '../views/Login'
-import Home from '../views/Home'
 import Dashboard from '../views/DashBoard'
 import Add from '../views/Add'
+import Center from '../views/Center'
 import Search from '../views/Search'
 Vue.use(Router)
 
@@ -14,11 +14,6 @@ export default new Router({
       path: '/',
       name: 'Login',
       component: Login
-    },
-    {
-      path: '/home',
-      name: 'Home',
-      component: Home
     },
     {
       path: '/Dashboard',
@@ -34,6 +29,11 @@ export default new Router({
       path: '/Search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/Center',
+      name: 'Center',
+      component: Center
     }
   ]
 })

@@ -4,9 +4,6 @@
       <van-nav-bar title="失物招领系统" :border=true :fixed=true :placeholder=true>
       </van-nav-bar>
     </template>
-    <template v-if="isShow">
-
-    </template>
     <div class="main" v-if="!isShow">
       <van-notice-bar
         left-icon="volume-o"
@@ -73,10 +70,12 @@
     <van-overlay :show="cover">
       <van-loading type="spinner" style="top: 40%;left: 40%;" size="40px">上传中。。。</van-loading>
     </van-overlay>
+    <Verify ref="verify"></Verify>
   </div>
 </template>
 
 <script>
+import Verify from './Verify'
 import Bottom from './Bottom'
 import {Toast} from 'vant'
 
@@ -86,7 +85,8 @@ const requests = axios.create({baseURL: '/api'})
 export default {
   name: 'Addphone',
   components: {
-    Bottom: Bottom
+    Bottom: Bottom,
+    Verify: Verify
   },
   data () {
     return {
@@ -98,6 +98,9 @@ export default {
       uploader: [],
       cover: false
     }
+  },
+  mounted () {
+    this.$refs.verify.verify()
   },
   methods: {
     async onSubmit () {

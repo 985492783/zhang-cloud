@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuesession from 'vue-session'
+import VueCookies from 'vue-cookies'
 import ElementUI from 'element-ui'
 import Vant, { Lazyload, PullRefresh } from 'vant'
 import 'vant/lib/index.css'
@@ -14,6 +15,7 @@ Vue.use(PullRefresh)
 Vue.use(Lazyload)
 Vue.use(Vant)
 Vue.use(ElementUI)
+Vue.use(VueCookies)
 
 /* eslint-disable no-new */
 new Vue({

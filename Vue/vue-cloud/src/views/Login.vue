@@ -36,6 +36,9 @@ export default {
       Info: {}
     }
   },
+  mounted () {
+    this.verify()
+  },
   methods: {
     async submit () {
       this.Info.username = this.username
@@ -52,10 +55,24 @@ export default {
         }
         this.$session.set('token', res.data.data.token)
         this.$session.set('username', res.data.data.username)
+        this.$cookies.set('token', res.data.data.token)
+        this.$cookies.set('username', res.data.data.username)
         this.$router.push({ path: '/Dashboard' })
       }, () => {
         this.$refs.myDialog.alert('服务器超时，请稍后重试', null)
       })
+    },
+    verify () {
+      if (this.$cookies.get('token') !== null && this.$cookies.get('username') != null) {
+        let token = this.$cookies.get('token')
+        requests.get('/user/verify', {headers: {'token': token}}).then((res) => {
+          if (res.data.code === 200) {
+            this.$session.set('token', this.$cookies.get('token'))
+            this.$session.set('username', this.$cookies.get('username'))
+            this.$router.push({path: '/Dashboard'})
+          }
+        })
+      }
     }
   },
   components: {

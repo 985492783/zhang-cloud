@@ -4,7 +4,6 @@ import com.zhang.cloud.entities.CommonResult;
 import com.zhang.cloud.entities.UserDO;
 import com.zhang.cloud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -37,5 +36,10 @@ public class LoginController {
     @GetMapping("api/user/logout")
     public  CommonResult logout(HttpServletRequest request){
         return userService.logout(request.getHeader("token"));
+    }
+
+    @PostMapping("api/user/register")
+    public  CommonResult register(@RequestBody UserDO userDO){
+        return userService.register(userDO);
     }
 }

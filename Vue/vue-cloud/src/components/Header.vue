@@ -23,7 +23,7 @@ export default {
   methods: {
     logout () {
       this.$session.clear()
-      this.$router.push({ path: '/' })
+      this.$router.push({ path: '/Login' })
     }
   }
 }

@@ -46,4 +46,10 @@ public class LostProperty {
      * time
      */
     private LocalDateTime gmtCreated;
+
+    private String type;
+
+    private Integer publish;
+
+    private Integer exist;
 }

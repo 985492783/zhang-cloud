@@ -3,8 +3,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhang.cloud.dao.UserDAO">
     <insert id="insert" parameterType="UserDO" useGeneratedKeys="true" keyProperty="id">
-        insert into user1(user_name,pwd,gmt_created,gmt_modified)
-        values (#{username},#{pwd},now(),now())
+        insert into user1(user_name,nick_name,pwd,email,url,gmt_created,gmt_modified)
+        values (#{username},#{username},#{password},#{email},#{url},now(),now())
     </insert>
 
     <resultMap id="resultMap" type="com.zhang.cloud.entities.UserDO">
@@ -20,5 +20,13 @@
 
     <select id="findByUsername" resultMap="resultMap">
         select * from user1 where user_name=#{username} limit 1
+    </select>
+
+    <update id="active">
+        update user1 set gmt_modified=now() where user_name=#{username}
+    </update>
+
+    <select id="findByEmail" resultMap="resultMap">
+        select * from user1 where email=#{email} limit 1
     </select>
 </mapper>

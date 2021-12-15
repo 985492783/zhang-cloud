@@ -1,4 +1,7 @@
-com\zhang\cloud\entities\Order.class
+com\zhang\cloud\entities\Message.class
+com\zhang\cloud\dao\BookDAO.class
 com\zhang\cloud\entities\CommonResult.class
 com\zhang\cloud\entities\BookDO.class
+com\zhang\cloud\entities\Order.class
+com\zhang\cloud\entities\LostProperty.class
 com\zhang\cloud\entities\UserDO.class

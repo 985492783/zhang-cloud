@@ -7,6 +7,7 @@ import io.lettuce.core.dynamic.annotation.Param;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author 98549
@@ -19,8 +20,8 @@ public class LostController {
     private LostService lostService;
 
     @PostMapping("api/user/upload")
-    public CommonResult uploadLostProperty(@RequestBody LostProperty lostProperty){
-        return lostService.uploadLost(lostProperty);
+    public CommonResult uploadLostProperty(@RequestBody LostProperty lostProperty, HttpServletRequest request){
+        return lostService.uploadLost(lostProperty,request.getHeader("token"));
     }
     @GetMapping("api/user/getAllLostProperty")
     public CommonResult getAllLostProperty(){

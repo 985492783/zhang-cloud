@@ -22,12 +22,15 @@ public class UserController {
 
     @GetMapping("/getUser")
     public CommonResult getAllUser(){
+        System.out.println(1);
         return userService.findAllUser();
     }
+
     @GetMapping("/user/{userId}")
     public CommonResult getUserById(@PathVariable("userId") Long id){
         return userService.findUserById(id);
     }
+
     @GetMapping("/updateUrl/{userId}")
     public CommonResult updateUrl(@PathVariable("userId") Long id,
                                   @Param("url") String url){

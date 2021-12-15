@@ -35,4 +35,11 @@ public interface UserService {
      * @return CommonResult
      */
     CommonResult verify(String token);
+
+    /**
+     * 注册
+     * @param userDO
+     * @return
+     */
+    CommonResult register(UserDO userDO);
 }

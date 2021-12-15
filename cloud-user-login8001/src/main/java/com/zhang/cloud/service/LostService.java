@@ -9,7 +9,7 @@ import com.zhang.cloud.entities.LostProperty;
  */
 public interface LostService {
 
-    CommonResult uploadLost(LostProperty lostProperty);
+    CommonResult uploadLost(LostProperty lostProperty,String token);
 
     CommonResult getAllLost();
 

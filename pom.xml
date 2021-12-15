@@ -16,6 +16,7 @@
         <module>zhang-cloud-gateway</module>
         <module>cloud-zhang-alipay</module>
         <module>cloud-zhang-admin</module>
+        <module>zhang-cloud-chat8002</module>
     </modules>
 
     <properties>

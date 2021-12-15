@@ -10,3 +10,4 @@ spring:
       config:
         server-addr: 101.34.40.117:8848
         file-extension: yaml
+        namespace: public

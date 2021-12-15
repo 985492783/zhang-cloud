@@ -1,10 +1,12 @@
 package com.zhang.cloud.service.impl;
 
+import cn.hutool.jwt.JWTUtil;
 import com.zhang.cloud.dao.LostDAO;
 import com.zhang.cloud.entities.CommonResult;
 import com.zhang.cloud.entities.LostProperty;
 import com.zhang.cloud.service.LostService;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -18,10 +20,14 @@ public class LostServiceImpl implements LostService {
     @Resource
     private LostDAO lostDAO;
     @Override
-    public CommonResult uploadLost(LostProperty lostProperty) {
+    public CommonResult uploadLost(LostProperty lostProperty,String token) {
         int val=0;
+        String username= (String) JWTUtil.parseToken(token).getPayload("uid");
         try {
             val=lostDAO.insert(lostProperty);
+            if(val>0){
+                val=lostDAO.insertUnite(lostProperty.getId(),username);
+            }
         }catch (Exception e){
             e.printStackTrace();
             return new CommonResult(444,"服务器超时，请稍后重试",null);

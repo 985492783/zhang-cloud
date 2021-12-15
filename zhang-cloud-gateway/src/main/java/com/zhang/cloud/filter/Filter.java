@@ -1,5 +1,6 @@
 package com.zhang.cloud.filter;
 
+import cn.hutool.jwt.JWTException;
 import cn.hutool.jwt.JWTUtil;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -14,9 +15,11 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author 98549
@@ -33,6 +36,10 @@ public class Filter implements GlobalFilter, Ordered {
     static{
         list = new ArrayList<>();
         list.add("/api/user/login");
+        list.add("/api/user/verify");
+        list.add("/api/user/register");
+        list.add("/api/user/sendCode");
+        list.add("/api/chat");
     }
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
@@ -51,7 +58,13 @@ public class Filter implements GlobalFilter, Ordered {
             response.setStatusCode(HttpStatus.UNAUTHORIZED);
             return response.setComplete();
         }
-        String uid= (String) JWTUtil.parseToken(token).getPayload("uid");
+        String uid=null;
+        try{
+            uid= (String) JWTUtil.parseToken(token).getPayload("uid");
+        }catch(JWTException e){
+            response.setStatusCode(HttpStatus.UNAUTHORIZED);
+            return response.setComplete();
+        }
         if(StringUtils.isEmpty(uid)){
             response.setStatusCode(HttpStatus.UNAUTHORIZED);
             return response.setComplete();
@@ -65,7 +78,7 @@ public class Filter implements GlobalFilter, Ordered {
     }
     public boolean isNeedFilter(String uri){
         for(String u:list){
-            if(uri.equals(u)){
+            if(uri.contains(u)){
                 return false;
             }
         }

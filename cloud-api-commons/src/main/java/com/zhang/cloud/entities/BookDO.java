@@ -20,7 +20,7 @@ public class BookDO implements Serializable {
 
     private String author;
 
-    private Boolean exist;
+    private Integer exist;
 
     private String url;
 

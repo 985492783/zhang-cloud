@@ -3,7 +3,7 @@
     <van-tabbar-item icon="home-o">失物大厅</van-tabbar-item>
     <van-tabbar-item icon="search">关键词检索</van-tabbar-item>
     <van-tabbar-item icon="plus">提交失物</van-tabbar-item>
-    <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
+    <van-tabbar-item icon="setting-o">个人中心</van-tabbar-item>
   </van-tabbar>
 </template>
 
@@ -19,7 +19,7 @@ export default {
   methods: {
     change () {
       if (this.active === 0) {
-        this.$router.push({path: '/Dashboard'})
+        this.$router.push({path: '/'})
       } else if (this.active === 2) {
         this.$router.push({path: '/Add'})
       } else if (this.active === 1) {

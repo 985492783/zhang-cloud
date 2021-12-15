@@ -1,7 +1,6 @@
 <template>
   <Addphone></Addphone>
 </template>
-
 <script>
 import Addphone from '../components/Addphone'
 export default {
@@ -11,7 +10,5 @@ export default {
   }
 }
 </script>
-
 <style scoped>
-
 </style>

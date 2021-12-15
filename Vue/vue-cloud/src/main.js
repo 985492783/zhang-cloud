@@ -16,7 +16,6 @@ Vue.use(Lazyload)
 Vue.use(Vant)
 Vue.use(ElementUI)
 Vue.use(VueCookies)
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

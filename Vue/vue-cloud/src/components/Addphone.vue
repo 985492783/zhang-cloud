@@ -31,6 +31,15 @@
           placeholder="失物地点"
           :rules="[{ required: true, message: '请填写失物地点' }]"
         />
+        <van-field name="radio" label="发布类型">
+          <template #input>
+            <van-radio-group v-model="radio2" direction="horizontal">
+              <van-radio name="0" >捡到</van-radio>
+              <van-radio name="1" >丢失</van-radio>
+              <van-radio name="2" >其他</van-radio>
+            </van-radio-group>
+          </template>
+        </van-field>
         <van-field name="radio" label="联系方式">
           <template #input>
             <van-radio-group v-model="radio" direction="horizontal">
@@ -96,7 +105,8 @@ export default {
       isNeedConnect: false,
       isNeedOne: true,
       uploader: [],
-      cover: false
+      cover: false,
+      radio2: '0'
     }
   },
   mounted () {
@@ -108,11 +118,17 @@ export default {
       let img = new Image()
       img.src = this.uploader[0].content
       this.Property.image = this.compress(img, 0.2)
+      let type = this.radio2 === '0' ? '捡到' : this.radio2 === '1' ? '丢失' : '其他'
+      this.Property.type = type
       let token = this.$session.get('token')
       let data = this.Property
       await requests.post('/user/upload', data, {headers: {'token': token}}).then((res) => {
-        Toast.success('上传成功')
-        location.reload()
+        if (res.data.code === 200) {
+          Toast.success('上传成功')
+          location.reload()
+        } else {
+          Toast.fail(res.data.message)
+        }
       }, () => {
         Toast.fail('服务器超时')
       })

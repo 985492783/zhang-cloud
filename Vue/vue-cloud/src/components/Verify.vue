@@ -12,10 +12,10 @@ export default {
     Dialog: Dialog.Component
   },
   methods: {
-    verify () {
+    async verify () {
       if (this.$cookies.get('token') !== null && this.$cookies.get('username') != null) {
         let token = this.$cookies.get('token')
-        requests.get('/user/verify', {headers: {'token': token}}).then((res) => {
+        await requests.get('/user/verify', {headers: {'token': token}}).then((res) => {
           if (res.data.code === 200) {
             this.$session.set('token', this.$cookies.get('token'))
             this.$session.set('username', this.$cookies.get('username'))
@@ -24,7 +24,10 @@ export default {
           }
         })
       } else {
-        this.alert('您尚未登录，请登录后重试')
+        this.$cookies.remove('token')
+        this.$cookies.remove('username')
+        this.$session.clear()
+        this.$router.push({path: '/Login'})
       }
     },
     alert (e) {
@@ -35,7 +38,7 @@ export default {
         this.$cookies.remove('token')
         this.$cookies.remove('username')
         this.$session.clear()
-        this.$router.push({path: '/'})
+        this.$router.push({path: '/Login'})
       })
     }
   }

@@ -19,7 +19,12 @@
     </template>
     <template  v-if="isShow">
       <van-list style="margin:4px;" class="main">
-        <van-cell arrow-direction="" v-for="item in list" is-link :key="item.ddd" :title="item.name" :value="item.info" :label="item.gmtCreated" @click="showItem(item.id)"/>
+        <van-cell arrow-direction="" v-for="item in list" is-link :key="item.ddd" :title="item.name" :value="item.info" :label="item.gmtCreated" @click="showItem(item.id)">
+          <template #title>
+            <span class="custom-title">{{item.name}}</span>
+            <van-tag :type="item.type==='丢失'?'primary':item.type==='捡到'?'danger':'warning'">{{item.type==='丢失'?'丢失':item.type==='捡到'?'捡到':'其他'}}</van-tag>
+          </template>
+        </van-cell>
       </van-list>
     </template>
     <div class="main" v-if="!isShow">

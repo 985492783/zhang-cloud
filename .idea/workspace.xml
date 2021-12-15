@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1684aa20-0df9-43b0-9ca1-70068aaf6762" name="Changes" comment="异地登录挤下线，过滤器">
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Addphone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Addphone.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Bottom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Bottom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/components/CenterPhone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/components/CenterPhone.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Dashphone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Dashphone.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/components/SearchPhone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/components/SearchPhone.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Verify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/components/Verify.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/views/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/views/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/zhang/cloud/entities/BookDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/zhang/cloud/entities/BookDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/zhang/cloud/entities/LostProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/zhang/cloud/entities/LostProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/zhang/cloud/entities/BookDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/zhang/cloud/entities/BookDO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/zhang/cloud/entities/LostProperty.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/zhang/cloud/entities/LostProperty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/cloud-api-commons-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/cloud-api-commons-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-interface/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/SpringMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/AuthenticationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/AuthenticationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/RoleAuthorize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/RoleAuthorizeImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/component/SessionMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/SpringMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/aop/Authentication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/aop/AuthenticationImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/aop/RoleAuthorize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/aop/RoleAuthorizeImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/component/InitializingRedis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/component/RoleAuthorizeConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/component/SessionMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/component/ShiroUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/component/SpringUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/target/classes/com/zhang/cloud/controller/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/controller/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/controller/LostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/controller/LostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/dao/BookDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/dao/LostDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/dao/LostDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/BookService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/LostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/LostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/impl/BookServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/impl/LostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/impl/LostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/resources/mapper/BookMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/resources/mapper/LostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/resources/mapper/LostMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/controller/BookController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/controller/LostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/controller/LostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/dao/BookDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/dao/LostDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/dao/LostDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/BookService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/LostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/LostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/impl/BookServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/impl/LostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/impl/LostServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/impl/UserServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/impl/UserServiceImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/com/zhang/cloud/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/mapper/BookMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/mapper/LostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/mapper/LostMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/cloud-user-login-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/cloud-user-login-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/login.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-zhang-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/src/main/java/com/zhang/cloud/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-zhang-admin/src/main/java/com/zhang/cloud/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-zhang-admin/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/target/classes/com/zhang/cloud/AdminMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/target/classes/com/zhang/cloud/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/target/classes/com/zhang/cloud/dao/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/target/classes/com/zhang/cloud/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/target/classes/com/zhang/cloud/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-zhang-admin/target/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/src/main/java/com/zhang/cloud/filter/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zhang-cloud-gateway/src/main/java/com/zhang/cloud/filter/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/classes/com/zhang/cloud/GateWay9527.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/classes/com/zhang/cloud/filter/AdminFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/classes/com/zhang/cloud/filter/Filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/zhang-cloud-gateway-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/target/zhang-cloud-gateway.jar" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Vue Single File Component" />
+        <option value="mybatis-cfg.xml" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/cloud-api-interface" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="C:\Program Files\Java\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1zQtvQm5lBUBFGHjiyqhrfXIx5s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.2" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.32" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../All Learn/洛谷/demo" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Lombok" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zhanghong\user_cloud\Vue\vue-cloud\src\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zhang.cloud.entities" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ConsumerMain81">
+    <configuration name="AdminMain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-zhang-admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.AdminMain" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatMain8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zhang-cloud-chat8002" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.ChatMain8002" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerMain81" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zhang-cloud-consumer81" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.ConsumerMain81" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GateWay9527" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zhang-cloud-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.GateWay9527" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginMain8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-user-login8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.LoginMain8001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringMain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-api-interface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.SpringMain" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ConsumerMain81" />
+        <item itemvalue="Spring Boot.SpringMain" />
+        <item itemvalue="Spring Boot.LoginMain8001" />
+        <item itemvalue="Spring Boot.GateWay9527" />
+        <item itemvalue="Spring Boot.AdminMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1684aa20-0df9-43b0-9ca1-70068aaf6762" name="Changes" comment="" />
+      <created>1634092371531</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634092371531</updated>
+      <workItem from="1634092373837" duration="1330000" />
+      <workItem from="1634093731475" duration="3243000" />
+      <workItem from="1634104513949" duration="1445000" />
+      <workItem from="1634123864395" duration="997000" />
+      <workItem from="1634135192869" duration="1404000" />
+      <workItem from="1634192348688" duration="877000" />
+      <workItem from="1634536586730" duration="1160000" />
+      <workItem from="1634898706407" duration="1808000" />
+      <workItem from="1635066532749" duration="13774000" />
+      <workItem from="1635140559828" duration="6091000" />
+      <workItem from="1635148205391" duration="1146000" />
+      <workItem from="1635158958375" duration="6919000" />
+      <workItem from="1635173752520" duration="622000" />
+      <workItem from="1635178500425" duration="414000" />
+      <workItem from="1635227540376" duration="77000" />
+      <workItem from="1635248367168" duration="161000" />
+      <workItem from="1635332293661" duration="2633000" />
+      <workItem from="1635350301058" duration="5498000" />
+      <workItem from="1635399831292" duration="8920000" />
+      <workItem from="1635418368692" duration="1518000" />
+      <workItem from="1635494826381" duration="4597000" />
+      <workItem from="1635593344737" duration="11000" />
+      <workItem from="1635745972494" duration="5404000" />
+      <workItem from="1635753342989" duration="2505000" />
+      <workItem from="1635768015319" duration="11855000" />
+      <workItem from="1635838606635" duration="4203000" />
+      <workItem from="1635913029147" duration="2921000" />
+      <workItem from="1635922330932" duration="2323000" />
+      <workItem from="1636012105454" duration="1817000" />
+      <workItem from="1636028630278" duration="6232000" />
+      <workItem from="1636038774466" duration="6186000" />
+      <workItem from="1636093189978" duration="7193000" />
+      <workItem from="1636171387741" duration="2971000" />
+      <workItem from="1636204374437" duration="8004000" />
+      <workItem from="1636257809702" duration="27524000" />
+      <workItem from="1636350184572" duration="5530000" />
+      <workItem from="1636454376133" duration="6074000" />
+      <workItem from="1636462955692" duration="9668000" />
+      <workItem from="1636509813414" duration="5059000" />
+      <workItem from="1636544623616" duration="1121000" />
+      <workItem from="1636546272575" duration="1081000" />
+      <workItem from="1636551575766" duration="6557000" />
+      <workItem from="1636619309594" duration="408000" />
+      <workItem from="1636630740542" duration="20528000" />
+      <workItem from="1636689703526" duration="2376000" />
+      <workItem from="1636694189282" duration="787000" />
+      <workItem from="1636697411302" duration="195000" />
+      <workItem from="1636697764843" duration="9810000" />
+      <workItem from="1636713858123" duration="10752000" />
+      <workItem from="1636731697572" duration="3258000" />
+      <workItem from="1636767562577" duration="5872000" />
+      <workItem from="1636777740789" duration="3451000" />
+      <workItem from="1636806247277" duration="1689000" />
+      <workItem from="1636862541053" duration="6899000" />
+      <workItem from="1636880328941" duration="6982000" />
+      <workItem from="1636889304359" duration="8895000" />
+      <workItem from="1636935073759" duration="391000" />
+      <workItem from="1636937726655" duration="796000" />
+      <workItem from="1636955223449" duration="3107000" />
+      <workItem from="1637112746418" duration="8380000" />
+      <workItem from="1637145840260" duration="5424000" />
+      <workItem from="1637152556455" duration="7582000" />
+      <workItem from="1637162314015" duration="6721000" />
+      <workItem from="1637201307171" duration="154000" />
+      <workItem from="1637208254692" duration="2077000" />
+      <workItem from="1637232712616" duration="3561000" />
+      <workItem from="1637301669999" duration="9000" />
+      <workItem from="1637301708697" duration="14073000" />
+      <workItem from="1637335798322" duration="326000" />
+      <workItem from="1637385350313" duration="24390000" />
+      <workItem from="1637475660544" duration="2468000" />
+      <workItem from="1637494801760" duration="2462000" />
+      <workItem from="1637561106091" duration="44000" />
+      <workItem from="1637561827294" duration="1240000" />
+      <workItem from="1637587806621" duration="1865000" />
+      <workItem from="1637664510833" duration="1347000" />
+      <workItem from="1637666329216" duration="2271000" />
+      <workItem from="1637672775556" duration="3001000" />
+      <workItem from="1637736466915" duration="835000" />
+      <workItem from="1637856610912" duration="576000" />
+      <workItem from="1638078934673" duration="2851000" />
+      <workItem from="1638086726574" duration="795000" />
+      <workItem from="1638101213045" duration="3028000" />
+      <workItem from="1638194053565" duration="2194000" />
+      <workItem from="1638204617413" duration="1482000" />
+      <workItem from="1638247558982" duration="932000" />
+      <workItem from="1638266110314" duration="5489000" />
+      <workItem from="1638280554821" duration="1284000" />
+      <workItem from="1638283186490" duration="123000" />
+      <workItem from="1638460077462" duration="995000" />
+      <workItem from="1638526988029" duration="5419000" />
+      <workItem from="1638632308004" duration="3499000" />
+      <workItem from="1638679319605" duration="7305000" />
+      <workItem from="1638687347925" duration="74000" />
+      <workItem from="1638687501205" duration="378000" />
+      <workItem from="1638687935937" duration="4846000" />
+      <workItem from="1638694223166" duration="1201000" />
+      <workItem from="1638705069955" duration="1778000" />
+      <workItem from="1638764343266" duration="1003000" />
+      <workItem from="1638769566625" duration="2265000" />
+      <workItem from="1638772330474" duration="3037000" />
+      <workItem from="1638785972594" duration="94000" />
+      <workItem from="1638786146884" duration="3253000" />
+      <workItem from="1638960282615" duration="9000" />
+      <workItem from="1638981278969" duration="287000" />
+      <workItem from="1639057349907" duration="6566000" />
+      <workItem from="1639124404745" duration="3928000" />
+      <workItem from="1639136612417" duration="1611000" />
+      <workItem from="1639139003135" duration="4511000" />
+      <workItem from="1639199646421" duration="2458000" />
+      <workItem from="1639204199688" duration="2382000" />
+      <workItem from="1639228443464" duration="5062000" />
+      <workItem from="1639241854460" duration="2789000" />
+      <workItem from="1639244696783" duration="1363000" />
+      <workItem from="1639283229048" duration="20729000" />
+      <workItem from="1639324594827" duration="348000" />
+      <workItem from="1639374239269" duration="4342000" />
+      <workItem from="1639382150119" duration="1380000" />
+      <workItem from="1639412106553" duration="626000" />
+      <workItem from="1639461200586" duration="1747000" />
+      <workItem from="1639474326374" duration="202000" />
+      <workItem from="1639476155396" duration="587000" />
+      <workItem from="1639478829785" duration="1372000" />
+      <workItem from="1639542047700" duration="6796000" />
+      <workItem from="1639553752480" duration="3720000" />
+    </task>
+    <task id="LOCAL-00001" summary="异地登录挤下线，过滤器">
+      <created>1635413142451</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635413142451</updated>
+    </task>
+    <task id="LOCAL-00002" summary="异地登录挤下线，过滤器">
+      <created>1635413231256</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635413231256</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="异地登录挤下线，过滤器" />
+    <option name="LAST_COMMIT_MESSAGE" value="异地登录挤下线，过滤器" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.UnknownHostException" package="java.net" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

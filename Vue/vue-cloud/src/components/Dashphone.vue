@@ -9,7 +9,12 @@
     </template>
     <template v-if="isShow">
       <van-list style="margin:4px;" class="main">
-        <van-cell arrow-direction="" v-for="item in list" is-link :key="item.ddd" :title="item.name" :value="item.info" :label="item.gmtCreated" @click="showItem(item.id)"/>
+        <van-cell arrow-direction="" v-for="item in list" is-link :key="item.ddd"  :value="item.info" :label="item.gmtCreated" @click="showItem(item.id)">
+          <template #title>
+            <span class="custom-title">{{item.name}}</span>
+            <van-tag :type="item.type==='丢失'?'primary':item.type==='捡到'?'danger':'warning'">{{item.type==='丢失'?'丢失':item.type==='捡到'?'捡到':'其他'}}</van-tag>
+          </template>
+        </van-cell>
         <van-pagination
           v-model="currentPage"
           :page-count=pageSize
@@ -100,25 +105,25 @@ export default {
       this.show()
       this.UserInfo = {}
     },
-    getData () {
-      let token = this.$session.get('token')
-      requests.get('/user/getLostProperty?pageNo=1', {headers: {'token': token}}).then((res) => {
+    async getData () {
+      let token = this.$cookies.get('token')
+      await requests.get('/user/getLostProperty?pageNo=1', {headers: {'token': token}}).then((res) => {
         this.list = res.data.data
       })
     },
     showImage (e) {
       ImagePreview([e])
     },
-    getPage () {
-      let token = this.$session.get('token')
-      requests.get('/user/getPageNumber', {headers: {'token': token}}).then((res) => {
+    async getPage () {
+      let token = this.$cookies.get('token')
+      await requests.get('/user/getPageNumber', {headers: {'token': token}}).then((res) => {
         this.pageSize = res.data.data
       }, () => {
         this.pageSize = 100
       })
     },
     changePage () {
-      let token = this.$session.get('token')
+      let token = this.$cookies.get('token')
       requests.get('/user/getLostProperty?pageNo=' + this.currentPage, {headers: {'token': token}}).then((res) => {
         this.list = res.data.data
       })

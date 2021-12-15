@@ -1,7 +1,0 @@
-spring:
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://rm-bp19b3y81jd6ggh1hvo.mysql.rds.aliyuncs.com:3306/zhdb?serverTimezone=GMT%2B8&tinyInt1isBit=false
-    username: zhanghong
-    password: 18550713739zhZH

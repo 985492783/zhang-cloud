@@ -1,0 +1,16 @@
+com\zhang\cloud\entities\BookDO.class
+com\zhang\cloud\entities\MyQueue.class
+com\zhang\cloud\entities\Order.class
+com\zhang\cloud\entities\file\Video.class
+com\zhang\cloud\entities\file\Directory$FileType.class
+com\zhang\cloud\entities\UserDO.class
+com\zhang\cloud\entities\file\FileDirectory.class
+com\zhang\cloud\entities\file\Directory.class
+com\zhang\cloud\entities\Message.class
+com\zhang\cloud\entities\SnowFlake.class
+com\zhang\cloud\entities\Text.class
+com\zhang\cloud\dao\BookDAO.class
+com\zhang\cloud\entities\CommonResult.class
+com\zhang\cloud\entities\Text$Type.class
+com\zhang\cloud\dao\FileDAO.class
+com\zhang\cloud\entities\LostProperty.class

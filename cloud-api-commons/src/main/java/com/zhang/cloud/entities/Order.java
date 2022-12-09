@@ -1,5 +1,8 @@
 package com.zhang.cloud.entities;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,9 +14,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Order {
-    private String userId;
-    private String orderId;
+    private Long userId;
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long orderId;
     private String amount;
     private String subject;
     private String status;

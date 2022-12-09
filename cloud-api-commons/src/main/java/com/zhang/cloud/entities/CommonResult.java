@@ -14,9 +14,15 @@ import lombok.NoArgsConstructor;
 public class CommonResult<T> {
     private Integer code;
     private String message;
-    private T Data;
+    private T data;
 
     public CommonResult(Integer code, String message){
         this(code,message,null);
+    }
+    public CommonResult success(T data){
+        this.code=200;
+        this.message="请求成功";
+        this.data=data;
+        return this;
     }
 }

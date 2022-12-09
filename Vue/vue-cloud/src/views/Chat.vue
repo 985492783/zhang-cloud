@@ -33,7 +33,8 @@
 <script>
 import {Toast} from 'vant'
 import Verify from '../components/Verify'
-
+import axios from 'axios'
+const requests = axios.create({baseURL: '/api'})
 export default {
   name: 'Chat',
   data () {
@@ -57,7 +58,7 @@ export default {
   methods: {
     initWs () {
       let token = this.$cookies.get('token')
-      this.websock = new WebSocket('ws://101.34.40.117:9527/api/chat/1?token=' + token)
+      this.websock = new WebSocket('ws://10.12.34.96:9527/api/chat/1?token=' + token)
       this.websock.onopen = this.websocketonopen
       this.websock.onerror = this.websocketonerror
       this.websock.onmessage = this.websocketonmessage
@@ -74,7 +75,6 @@ export default {
     websocketonmessage (e) {
       let json = JSON.parse(e.data)
       this.list.push(json)
-
       let div = this.$refs.main
       setTimeout(() => {
         div.scrollTop = div.scrollHeight
@@ -95,6 +95,20 @@ export default {
     back () {
       this.websock.close()
       this.$router.back()
+    },
+    test () {
+      let data = {
+        'userId': 2,
+        'amount': '1.00',
+        'subject': '商品',
+        'status': '未支付'
+      }
+      let token = localStorage.getItem('token')
+      requests.post('/consumer/mq', data, {headers: {'token': token}}).then((res) => {
+        if (res.data.code === 200) {
+          console.log(res.data)
+        }
+      })
     }
   }
 }

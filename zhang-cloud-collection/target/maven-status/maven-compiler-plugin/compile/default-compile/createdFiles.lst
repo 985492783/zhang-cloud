@@ -1,0 +1,4 @@
+com\zhang\cloud\CollectionMain.class
+com\zhang\cloud\Controller\FileController.class
+com\zhang\cloud\service\impl\FileServiceImpl.class
+com\zhang\cloud\service\FileService.class

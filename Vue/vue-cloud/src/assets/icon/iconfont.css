@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3029754 */
+  src: url('iconfont.woff2?t=1639974552204') format('woff2'),
+       url('iconfont.woff?t=1639974552204') format('woff'),
+       url('iconfont.ttf?t=1639974552204') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wenjian:before {
+  content: "\e601";
+}
+
+.icon-rar:before {
+  content: "\e634";
+}
+
+.icon-txt:before {
+  content: "\e7c0";
+}
+
+.icon-pdf:before {
+  content: "\e740";
+}
+
+.icon-JPG:before {
+  content: "\ec17";
+}
+
+.icon-PNG:before {
+  content: "\ec18";
+}
+
+.icon-HTML:before {
+  content: "\e87d";
+}
+
+.icon-CSS:before {
+  content: "\e614";
+}
+
+.icon-DOC:before {
+  content: "\e615";
+}
+.icon-doc:before {
+  content: "\e615";
+}
+.icon-js:before {
+  content: "\ec68";
+}
+
+.icon-wenjianjia:before {
+  content: "\e600";
+}
+

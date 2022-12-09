@@ -1,0 +1,13 @@
+server:
+  port: 7001
+spring:
+  profiles:
+    active: dev
+  application:
+    name: zhang-cloud-admin
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.217.128:8849
+        file-extension: yaml
+        namespace: public

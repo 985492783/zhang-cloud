@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import {Notify, Toast} from 'vant'
+import {Toast} from 'vant'
+import {Response} from './assets/js/Test'
 export default {
   name: 'App',
   destroyed () {
-    this.closeWs()
   },
   created () {
     this.initWs()
@@ -17,7 +17,7 @@ export default {
   methods: {
     initWs () {
       let token = localStorage.getItem('token')
-      this.websock = new WebSocket('ws://101.34.40.117:9527/api/chat/1?token=' + token)
+      this.websock = new WebSocket('ws://10.12.34.96:8011/api/message?token=' + token)
       this.websock.onopen = this.websocketonopen
       this.websock.onerror = this.websocketonerror
       this.websock.onmessage = this.websocketonmessage
@@ -26,13 +26,12 @@ export default {
     closeWs () {
     },
     websocketonmessage (e) {
-      Notify({ type: 'success', message: '收到一条新的信息' })
+      let obj = JSON.parse(e.data)
+      Response(this, obj)
     },
     websocketclose () {
-      Toast.success('关闭聊天室')
     },
     websocketonopen () {
-      Toast.success('成功连接到聊天室')
     },
     websocketonerror () {
       Toast.fail('WebSocket连接发生错误')

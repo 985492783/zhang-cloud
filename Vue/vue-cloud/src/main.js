@@ -9,8 +9,12 @@ import ElementUI from 'element-ui'
 import Vant, { Lazyload, PullRefresh } from 'vant'
 import 'vant/lib/index.css'
 import 'element-ui/lib/theme-chalk/index.css'
+import VeRing from 'v-charts/lib/ring.common'// 环形图
+import {VeLine} from 'v-charts/lib/index.esm'
+Vue.component(VeRing.name, VeRing)
 Vue.config.productionTip = true
 Vue.use(Vuesession)
+Vue.component(VeLine.name, VeLine)
 Vue.use(PullRefresh)
 Vue.use(Lazyload)
 Vue.use(Vant)

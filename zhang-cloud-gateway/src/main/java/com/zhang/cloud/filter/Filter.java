@@ -5,6 +5,7 @@ import cn.hutool.jwt.JWTUtil;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -17,9 +18,7 @@ import reactor.core.publisher.Mono;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author 98549
@@ -30,7 +29,8 @@ public class Filter implements GlobalFilter, Ordered {
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
-
+    @Resource
+    private RedisTemplate redisTemplate;
     private static final String AUTHORIZE_TOKEN = "token";
     private static List<String> list;
     static{
@@ -40,11 +40,19 @@ public class Filter implements GlobalFilter, Ordered {
         list.add("/api/user/register");
         list.add("/api/user/sendCode");
         list.add("/api/chat");
+        list.add("/api/file");
+        list.add("/api/consumer");
+    }
+    @PostConstruct
+    public void init(){
+        redisTemplate.opsForHash().putAll("map1",new HashMap<>());
     }
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
-        if(!isNeedFilter(request.getPath().value())){
+        String path=request.getPath().value();
+        addRate(path);
+        if(!isNeedFilter(path)){
             return chain.filter(exchange);
         }
         HttpHeaders headers = request.getHeaders();
@@ -87,5 +95,22 @@ public class Filter implements GlobalFilter, Ordered {
     @Override
     public int getOrder() {
         return -1;
+    }
+
+    public void addRate(String path){
+        Queue<Long> queue=(Queue)redisTemplate.opsForHash().get("map1",path);
+        if(queue==null){
+            queue=create(path);
+        }
+        queue.add(System.currentTimeMillis());
+        redisTemplate.opsForHash().put("map1",path,queue);
+    }
+    public synchronized Queue create(String path){
+        Queue<Long> queue=(Queue)redisTemplate.opsForHash().get("map1",path);
+        if(queue==null){
+            queue=new LinkedList<>();
+            redisTemplate.opsForHash().put("map1",path,queue);
+        }
+        return queue;
     }
 }

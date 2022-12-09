@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1684aa20-0df9-43b0-9ca1-70068aaf6762" name="Changes" comment="异地登录挤下线，过滤器">
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/components/CenterPhone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/components/CenterPhone.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/vue-cloud/src/views/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/vue-cloud/src/views/Chat.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/zhang/cloud/entities/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/zhang/cloud/entities/CommonResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/zhang/cloud/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/zhang/cloud/entities/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-interface/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/AuthenticationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/AuthenticationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/MyDataProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-interface/src/main/java/com/zhang/cloud/aop/MyDataProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/java/com/zhang/cloud/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login8001/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login8001/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-chat8002/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zhang-cloud-chat8002/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-chat8002/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zhang-cloud-chat8002/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zhang-cloud-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/src/main/java/com/zhang/cloud/filter/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zhang-cloud-gateway/src/main/java/com/zhang/cloud/filter/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhang-cloud-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zhang-cloud-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="mybatis-cfg.xml" />
+        <option value="CSS File" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="C:\Program Files\Java\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1zQtvQm5lBUBFGHjiyqhrfXIx5s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/实战/Book&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\zhanghong\\user_cloud\\Vue\\vue-cloud\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\zhanghong\user_cloud\Vue\vue-cloud\src\assets\mp3" />
+      <recent name="D:\zhanghong\user_cloud\Vue\vue-cloud\src\assets\icon" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zhanghong\user_cloud\Vue\vue-cloud\src\assets\svg" />
+      <recent name="D:\zhanghong\user_cloud\Vue\vue-cloud\src\assets\png" />
+      <recent name="D:\zhanghong\user_cloud\Vue\vue-cloud\src\components\file" />
+      <recent name="D:\zhanghong\user_cloud\Vue\vue-cloud\src\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zhang.cloud.entities" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GateWay9527">
+    <configuration name="DataUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhang.cloud.util.DataUtil" />
+      <module name="cloud-api-interface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhang.cloud.Controller.Test" />
+      <module name="zhang-cloud-collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerMain81.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zhang-cloud-consumer81" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhang.cloud" />
+      <option name="MAIN_CLASS_NAME" value="com.zhang.cloud.ConsumerMain81" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminMain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-zhang-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.AdminMain" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatMain8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zhang-cloud-chat8002" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.ChatMain8002" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerMain81" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zhang-cloud-consumer81" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.ConsumerMain81" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GateWay9527" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="zhang-cloud-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.GateWay9527" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginMain8001 (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-user-login" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.LoginMain8001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginMain8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-user-login8001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhang.cloud.LoginMain8001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.GateWay9527" />
+        <item itemvalue="Spring Boot.ConsumerMain81" />
+        <item itemvalue="JUnit.ConsumerMain81.test" />
+        <item itemvalue="Application.DataUtil" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1684aa20-0df9-43b0-9ca1-70068aaf6762" name="Changes" comment="" />
+      <created>1634092371531</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634092371531</updated>
+      <workItem from="1634092373837" duration="1330000" />
+      <workItem from="1634093731475" duration="3243000" />
+      <workItem from="1634104513949" duration="1445000" />
+      <workItem from="1634123864395" duration="997000" />
+      <workItem from="1634135192869" duration="1404000" />
+      <workItem from="1634192348688" duration="877000" />
+      <workItem from="1634536586730" duration="1160000" />
+      <workItem from="1634898706407" duration="1808000" />
+      <workItem from="1635066532749" duration="13774000" />
+      <workItem from="1635140559828" duration="6091000" />
+      <workItem from="1635148205391" duration="1146000" />
+      <workItem from="1635158958375" duration="6919000" />
+      <workItem from="1635173752520" duration="622000" />
+      <workItem from="1635178500425" duration="414000" />
+      <workItem from="1635227540376" duration="77000" />
+      <workItem from="1635248367168" duration="161000" />
+      <workItem from="1635332293661" duration="2633000" />
+      <workItem from="1635350301058" duration="5498000" />
+      <workItem from="1635399831292" duration="8920000" />
+      <workItem from="1635418368692" duration="1518000" />
+      <workItem from="1635494826381" duration="4597000" />
+      <workItem from="1635593344737" duration="11000" />
+      <workItem from="1635745972494" duration="5404000" />
+      <workItem from="1635753342989" duration="2505000" />
+      <workItem from="1635768015319" duration="11855000" />
+      <workItem from="1635838606635" duration="4203000" />
+      <workItem from="1635913029147" duration="2921000" />
+      <workItem from="1635922330932" duration="2323000" />
+      <workItem from="1636012105454" duration="1817000" />
+      <workItem from="1636028630278" duration="6232000" />
+      <workItem from="1636038774466" duration="6186000" />
+      <workItem from="1636093189978" duration="7193000" />
+      <workItem from="1636171387741" duration="2971000" />
+      <workItem from="1636204374437" duration="8004000" />
+      <workItem from="1636257809702" duration="27524000" />
+      <workItem from="1636350184572" duration="5530000" />
+      <workItem from="1636454376133" duration="6074000" />
+      <workItem from="1636462955692" duration="9668000" />
+      <workItem from="1636509813414" duration="5059000" />
+      <workItem from="1636544623616" duration="1121000" />
+      <workItem from="1636546272575" duration="1081000" />
+      <workItem from="1636551575766" duration="6557000" />
+      <workItem from="1636619309594" duration="408000" />
+      <workItem from="1636630740542" duration="20528000" />
+      <workItem from="1636689703526" duration="2376000" />
+      <workItem from="1636694189282" duration="787000" />
+      <workItem from="1636697411302" duration="195000" />
+      <workItem from="1636697764843" duration="9810000" />
+      <workItem from="1636713858123" duration="10752000" />
+      <workItem from="1636731697572" duration="3258000" />
+      <workItem from="1636767562577" duration="5872000" />
+      <workItem from="1636777740789" duration="3451000" />
+      <workItem from="1636806247277" duration="1689000" />
+      <workItem from="1636862541053" duration="6899000" />
+      <workItem from="1636880328941" duration="6982000" />
+      <workItem from="1636889304359" duration="8895000" />
+      <workItem from="1636935073759" duration="391000" />
+      <workItem from="1636937726655" duration="796000" />
+      <workItem from="1636955223449" duration="3107000" />
+      <workItem from="1637112746418" duration="8380000" />
+      <workItem from="1637145840260" duration="5424000" />
+      <workItem from="1637152556455" duration="7582000" />
+      <workItem from="1637162314015" duration="6721000" />
+      <workItem from="1637201307171" duration="154000" />
+      <workItem from="1637208254692" duration="2077000" />
+      <workItem from="1637232712616" duration="3561000" />
+      <workItem from="1637301669999" duration="9000" />
+      <workItem from="1637301708697" duration="14073000" />
+      <workItem from="1637335798322" duration="326000" />
+      <workItem from="1637385350313" duration="24390000" />
+      <workItem from="1637475660544" duration="2468000" />
+      <workItem from="1637494801760" duration="2462000" />
+      <workItem from="1637561106091" duration="44000" />
+      <workItem from="1637561827294" duration="1240000" />
+      <workItem from="1637587806621" duration="1865000" />
+      <workItem from="1637664510833" duration="1347000" />
+      <workItem from="1637666329216" duration="2271000" />
+      <workItem from="1637672775556" duration="3001000" />
+      <workItem from="1637736466915" duration="835000" />
+      <workItem from="1637856610912" duration="576000" />
+      <workItem from="1638078934673" duration="2851000" />
+      <workItem from="1638086726574" duration="795000" />
+      <workItem from="1638101213045" duration="3028000" />
+      <workItem from="1638194053565" duration="2194000" />
+      <workItem from="1638204617413" duration="1482000" />
+      <workItem from="1638247558982" duration="932000" />
+      <workItem from="1638266110314" duration="5489000" />
+      <workItem from="1638280554821" duration="1284000" />
+      <workItem from="1638283186490" duration="123000" />
+      <workItem from="1638460077462" duration="995000" />
+      <workItem from="1638526988029" duration="5419000" />
+      <workItem from="1638632308004" duration="3499000" />
+      <workItem from="1638679319605" duration="7305000" />
+      <workItem from="1638687347925" duration="74000" />
+      <workItem from="1638687501205" duration="378000" />
+      <workItem from="1638687935937" duration="4846000" />
+      <workItem from="1638694223166" duration="1201000" />
+      <workItem from="1638705069955" duration="1778000" />
+      <workItem from="1638764343266" duration="1003000" />
+      <workItem from="1638769566625" duration="2265000" />
+      <workItem from="1638772330474" duration="3037000" />
+      <workItem from="1638785972594" duration="94000" />
+      <workItem from="1638786146884" duration="3253000" />
+      <workItem from="1638960282615" duration="9000" />
+      <workItem from="1638981278969" duration="287000" />
+      <workItem from="1639057349907" duration="6566000" />
+      <workItem from="1639124404745" duration="3928000" />
+      <workItem from="1639136612417" duration="1611000" />
+      <workItem from="1639139003135" duration="4511000" />
+      <workItem from="1639199646421" duration="2458000" />
+      <workItem from="1639204199688" duration="2382000" />
+      <workItem from="1639228443464" duration="5062000" />
+      <workItem from="1639241854460" duration="2789000" />
+      <workItem from="1639244696783" duration="1363000" />
+      <workItem from="1639283229048" duration="20729000" />
+      <workItem from="1639324594827" duration="348000" />
+      <workItem from="1639374239269" duration="4342000" />
+      <workItem from="1639382150119" duration="1380000" />
+      <workItem from="1639412106553" duration="626000" />
+      <workItem from="1639461200586" duration="1747000" />
+      <workItem from="1639474326374" duration="202000" />
+      <workItem from="1639476155396" duration="587000" />
+      <workItem from="1639478829785" duration="1372000" />
+      <workItem from="1639542047700" duration="6796000" />
+      <workItem from="1639553752480" duration="6215000" />
+      <workItem from="1639569593443" duration="43000" />
+      <workItem from="1639819059607" duration="595000" />
+      <workItem from="1639920410664" duration="11856000" />
+      <workItem from="1639973154580" duration="3442000" />
+      <workItem from="1639986273390" duration="2446000" />
+      <workItem from="1640006406089" duration="11832000" />
+      <workItem from="1640074036901" duration="4336000" />
+      <workItem from="1640086768029" duration="1135000" />
+      <workItem from="1640132124643" duration="759000" />
+      <workItem from="1640138474698" duration="1333000" />
+      <workItem from="1640163505109" duration="5427000" />
+      <workItem from="1640176179563" duration="11619000" />
+      <workItem from="1640240093631" duration="9034000" />
+      <workItem from="1640253457731" duration="9523000" />
+      <workItem from="1640271127466" duration="5548000" />
+      <workItem from="1640337821503" duration="2506000" />
+      <workItem from="1640355132294" duration="2419000" />
+      <workItem from="1640415415695" duration="2494000" />
+      <workItem from="1640427098558" duration="8021000" />
+      <workItem from="1640450894526" duration="2038000" />
+      <workItem from="1640506404849" duration="6697000" />
+      <workItem from="1640588022742" duration="4027000" />
+      <workItem from="1640767190171" duration="750000" />
+      <workItem from="1640768098298" duration="6000" />
+      <workItem from="1640857760964" duration="12000" />
+      <workItem from="1640876331758" duration="1495000" />
+      <workItem from="1640924162088" duration="3360000" />
+      <workItem from="1640934529353" duration="17025000" />
+      <workItem from="1641011964461" duration="13576000" />
+      <workItem from="1641046844690" duration="1595000" />
+      <workItem from="1641099540997" duration="871000" />
+      <workItem from="1641201757301" duration="349000" />
+      <workItem from="1641293448386" duration="5750000" />
+      <workItem from="1641304583444" duration="3579000" />
+      <workItem from="1641360904498" duration="21000" />
+      <workItem from="1641361257001" duration="14766000" />
+      <workItem from="1641382939591" duration="10847000" />
+      <workItem from="1641458792312" duration="102000" />
+      <workItem from="1641471014331" duration="588000" />
+      <workItem from="1641525790127" duration="1243000" />
+      <workItem from="1641528903034" duration="306000" />
+      <workItem from="1641568979495" duration="3231000" />
+      <workItem from="1641623127617" duration="2941000" />
+      <workItem from="1641800079578" duration="18008000" />
+      <workItem from="1641841991612" duration="5615000" />
+      <workItem from="1641895859679" duration="786000" />
+      <workItem from="1642007751203" duration="196000" />
+      <workItem from="1642058487408" duration="90000" />
+      <workItem from="1642180183115" duration="1776000" />
+      <workItem from="1642256329529" duration="1194000" />
+      <workItem from="1642311857713" duration="580000" />
+      <workItem from="1642312486682" duration="462000" />
+      <workItem from="1642320529353" duration="11100000" />
+      <workItem from="1642415015695" duration="5311000" />
+      <workItem from="1642433151767" duration="462000" />
+      <workItem from="1642609329616" duration="1753000" />
+      <workItem from="1642638594280" duration="74000" />
+      <workItem from="1642667873583" duration="114000" />
+      <workItem from="1643380836628" duration="552000" />
+      <workItem from="1643384824755" duration="545000" />
+      <workItem from="1643702741291" duration="238000" />
+      <workItem from="1643703420033" duration="1335000" />
+      <workItem from="1643732161918" duration="591000" />
+      <workItem from="1644045400398" duration="927000" />
+      <workItem from="1647265551635" duration="127000" />
+      <workItem from="1648699939825" duration="27000" />
+      <workItem from="1648700264747" duration="134000" />
+      <workItem from="1652930624386" duration="1014000" />
+      <workItem from="1653030997563" duration="935000" />
+      <workItem from="1653032080344" duration="3763000" />
+      <workItem from="1653054147725" duration="1209000" />
+      <workItem from="1653204163099" duration="8721000" />
+      <workItem from="1653803882398" duration="3087000" />
+      <workItem from="1654593155626" duration="803000" />
+      <workItem from="1654956460300" duration="1546000" />
+      <workItem from="1655011783789" duration="15910000" />
+      <workItem from="1655101753536" duration="17000" />
+      <workItem from="1655103301356" duration="1026000" />
+      <workItem from="1658583420634" duration="1107000" />
+      <workItem from="1658585703156" duration="2141000" />
+      <workItem from="1659960055017" duration="2831000" />
+      <workItem from="1660201981825" duration="3935000" />
+      <workItem from="1660277190672" duration="1464000" />
+      <workItem from="1660643218229" duration="16000" />
+      <workItem from="1660643769807" duration="386000" />
+      <workItem from="1660711744309" duration="43000" />
+      <workItem from="1660720243820" duration="23000" />
+      <workItem from="1660721346953" duration="4340000" />
+      <workItem from="1660735410265" duration="1140000" />
+      <workItem from="1660797301499" duration="921000" />
+      <workItem from="1660818345870" duration="7000" />
+      <workItem from="1661398033947" duration="56000" />
+      <workItem from="1662827023799" duration="92000" />
+      <workItem from="1664962380011" duration="2847000" />
+      <workItem from="1664986769640" duration="497000" />
+      <workItem from="1668521436195" duration="890000" />
+      <workItem from="1669391628995" duration="3195000" />
+      <workItem from="1669522893615" duration="2459000" />
+      <workItem from="1669726535576" duration="14000" />
+      <workItem from="1670331675179" duration="2149000" />
+    </task>
+    <task id="LOCAL-00001" summary="异地登录挤下线，过滤器">
+      <created>1635413142451</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635413142451</updated>
+    </task>
+    <task id="LOCAL-00002" summary="异地登录挤下线，过滤器">
+      <created>1635413231256</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635413231256</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Vue/vue-admin-template" />
+      <path value="$PROJECT_DIR$/Vue/vue-element-admin" />
+      <path value="$PROJECT_DIR$/cloud-api-interface" />
+    </ignored-roots>
+    <MESSAGE value="异地登录挤下线，过滤器" />
+    <option name="LAST_COMMIT_MESSAGE" value="异地登录挤下线，过滤器" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.UnknownHostException" package="java.net" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>mock:///SentinelProperties.java</url>
+          <line>218</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>mock:///SentinelProperties.java</url>
+          <line>202</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>mock:///SentinelProperties.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$MAVEN_REPOSITORY$/com/alibaba/cloud/spring-cloud-starter-alibaba-sentinel/2021.1/spring-cloud-starter-alibaba-sentinel-2021.1.jar!/com/alibaba/cloud/sentinel/SentinelProperties.class</url>
+          <line>217</line>
+          <properties class="com.alibaba.cloud.sentinel.SentinelProperties.Transport" method="getPort">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

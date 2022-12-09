@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_ADDITIONAL_VM_OPTIONS" value="-Djps.track.ap.dependencies=false" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-zhang-admin" />
+        <module name="zhang-cloud-consumer81" />
+        <module name="cloud-api-interface" />
+        <module name="cloud-api-commons" />
+        <module name="zhang-cloud-chat8002" />
+        <module name="cloud-user-login" />
+        <module name="cloud-user-login8001" />
+        <module name="zhang-cloud-gateway" />
+        <module name="cloud-zhang-alipay" />
+        <module name="zhang-cloud-collection" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="8" />
+      <module name="zhang-cloud-getaway" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-api-interface" options="" />
+    </option>
+  </component>
+</project>

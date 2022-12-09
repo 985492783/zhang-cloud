@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
         if(!md5pwd.equals(user.getPassword())){
             return new CommonResult(401,"密码错误",null);
         }
-        String token = getToken(user.getUsername(),user.getNickname());
+        String token = getToken(user.getId(),user.getUsername(),user.getNickname());
         stringRedisTemplate.opsForValue().set(user.getUsername(),token);
         user.setToken(token);
         return new CommonResult(200,"登录成功",user);
@@ -118,9 +118,10 @@ public class UserServiceImpl implements UserService {
         return new CommonResult(200,"注册成功");
     }
 
-    public String getToken(String userName,String nickName){
+    public String getToken(Long id,String userName,String nickName){
         Map<String, Object> map = new HashMap<String, Object>(){
             {
+                put("id",id);
                 put("uid", userName);
                 put("loginTime", LocalDateTime.now());
                 put("nickname",nickName);

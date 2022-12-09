@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: zhang-cloud-consumer
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.217.128:8849
+        file-extension: yml
+        namespace: 88c6e5c9-05cd-4f03-ab3e-024167c25d53

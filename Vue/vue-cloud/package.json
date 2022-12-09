@@ -1,26 +1,32 @@
 {
   "name": "vue-cloud",
   "version": "1.0.0",
+  "private": true,
   "description": "A Vue.js project",
   "author": "985492783 <985492783@qq.com>",
-  "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "e2e": "node test/e2e/runner.js",
+    "start": "npm run dev",
+    "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
+    "@yzfe/svgicon": "^1.1.0",
+    "@yzfe/vue3-svgicon": "^1.0.1",
     "axios": "^0.24.0",
+    "echarts": "^4.9.0",
     "element-ui": "^2.15.6",
+    "v-charts": "^1.19.0",
     "vue": "^2.5.2",
     "vue-cookies": "^1.7.4",
     "vue-router": "^3.0.1",
     "vue-session": "^1.0.0"
   },
   "devDependencies": {
+    "@yzfe/svgicon-loader": "^1.1.0",
+    "@yzfe/vue-cli-plugin-svgicon": "~1.1.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
@@ -65,11 +71,13 @@
     "selenium-server": "^3.0.1",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
+    "typescript": "^4.5.4",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vant": "^2.12.31",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
+    "vue-svg-icon": "^1.2.9",
     "vue-template-compiler": "^2.5.2",
     "vuex": "^3.6.2",
     "webpack": "^3.6.0",
@@ -77,13 +85,13 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
 }

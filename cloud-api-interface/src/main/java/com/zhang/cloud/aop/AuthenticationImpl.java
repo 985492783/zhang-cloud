@@ -16,5 +16,6 @@ public class AuthenticationImpl {
 
     @After(value="pointCut() && @annotation(authentication)")
     public void after(Authentication authentication){
+        System.out.println("method start time:" + System.currentTimeMillis());
     }
 }
